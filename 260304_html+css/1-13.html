@@ -1,0 +1,177 @@
+<!-- <!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1-8</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .container {
+    width: 250px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #FFB9B9;
+  }
+
+  .top-box {
+    background-color: #FFB9B9;
+    height: 150px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  .bottom-box {
+    background-color: white;
+    padding: 12px 16px;
+  }
+
+  .text {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    background-color: gray;
+    border-radius: 50%;
+  }
+
+  .name {
+    font-size: 14px;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="top-box"></div>
+  <div class="bottom-box">
+    <div class="text">안녕하세요. 텍스트입니다.</div>
+    <div class="profile">
+      <div class="avatar"></div>
+      <div class="name">휴양죠</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1920px;
+            height: 1080px;
+        }
+
+        #box {
+            width: 250px;
+            height: 225px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            padding: 0;
+            position: absolute;
+            left: 16px;
+            top: 16px;
+        }
+
+        #pink {
+            width: 250px;
+            height: 150px;
+            background: #FFB9B9;
+            border-radius: 8px 8px 0 0;
+        }
+
+        #white {
+            box-sizing: border-box;
+            width: 250px;
+            height: 75px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            padding: 6px 8px;
+            gap: 8px;
+
+            border-style: solid;
+            border-color: #FFB9B9;
+            border-width: 0 1px 1px 1px;
+        }
+
+        #text {
+            font-size: 12px;
+            line-height: 15px;
+            font-weight: 400;
+            color: #000;
+            margin: 0;
+        }
+
+        #bottom {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            padding: 8px 0;
+            gap: 8px;
+        }
+
+        #cir {
+            width: 24px;
+            height: 24px;
+            background: #D9D9D9;
+            border-radius: 50%;
+        }
+
+        #name {
+            font-size: 12px;
+            line-height: 15px;
+            font-weight: 400;
+            color: #000;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div id="pink"></div>
+
+        <div id="white">
+            <div id="text">안녕하세요. 텍스트입니다.</div>
+
+            <div id="bottom">
+                <div id="cir"></div>
+                <div id="name">휴양죠</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

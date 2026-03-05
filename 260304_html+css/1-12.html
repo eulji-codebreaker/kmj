@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 320px;
+            height: 320px;
+            top: 16px;
+            left: 16px;
+            background-image: url("/260304_html+css/asset/imge/img3.jpg");
+            background-size: cover;
+            background-position: center;
+            /* background-position: 100px 100px; */
+            background-size: 160%;
+
+            position: relative;
+        }
+
+        .info {
+            font-family: Inter;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: white;
+
+            text-align: left;
+            padding: 16px;
+        }
+
+        .fixed-box1 {
+            width: 32px;
+            height: 32px;
+            border-radius: 50px;
+            background: #E3FF92;
+
+            position: absolute;
+
+            top: 20px;
+            right: 20px;
+        } 
+        .fixed-box2 {
+            width: 32px;
+            height: 32px;
+            border-radius: 50px;
+            background: #92F8FF;
+
+            position: absolute;
+
+            bottom: 20px;
+            left: 20px;
+        } 
+        .fixed-box3 {
+            width: 32px;
+            height: 32px;
+            border-radius: 50px;
+            background: #FF9292;
+
+            position: absolute;
+
+            bottom: 20px;
+            right: 20px;
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="info">
+            <div>인테리어 디자인</div>
+        </div>
+    <div class="fixed-box1"></div>
+    <div class="fixed-box2"></div>
+    <div class="fixed-box3"></div>
+    </div>
+
+</body>
+
+</html>

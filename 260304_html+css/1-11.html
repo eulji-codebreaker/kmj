@@ -13,32 +13,27 @@
 
         .container {
             width: 320px;
-            height: 80px;
+            height: 320px;
             top: 16px;
             left: 16px;
-            background: #CA785C;
-            padding: 2px;
+            background-image: url("/260304_html+css/asset/imge/img3.jpg");
+            background-size: cover;
+            background-position: center;
+            background-size: 160%;
         }
 
         .info {
-            text-align: left;
-            display: flex;
-            flex-direction: row;
-            padding: 25px;
-            align-items: center;     
-            justify-content: flex-start;
-            gap: 16px;
-            padding-left: 12px;
-        }
-
-        .f1, .f2, .f3, .f4 {
             font-family: Inter;
             font-weight: 700;
             font-size: 24px;
             line-height: 100%;
             letter-spacing: 0%;
             color: white;
-            
+
+            position: absolute;
+
+            text-align: left;
+            padding: 16px;
         }
     </style>
 </head>
@@ -46,12 +41,10 @@
 <body>
     <div class="container">
         <div class="info">
-            <div class="f1">봄</div>
-            <div class="f2">여름</div>
-            <div class="f3">가을</div>
-            <div class="f4">겨울</div>
+            <div>인테리어 디자인</div>
         </div>
     </div>
+
 </body>
 
 </html>
