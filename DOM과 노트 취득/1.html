@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border-radius: 5px;
+            border: 3px solid lightgray;
+            padding: 30px;
+            margin: 10px;
+            max-width: 500px;
+            
+        }
+
+        p {
+            margin: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 3px;
+            border: 0;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box1" class="box">첫 번째 박스입니다.</div>
+    <div id="box2" class="box">두 번째 박스입니다.</div>
+    <p id="text">여기에 메시지가 표시됩니다.</p>
+    
+    <button  onclick="firstBox();">첫 번째 박스 선택</button>
+    <button onclick="secocndBox();">두 번째 박스 선택</button>
+    <button onclick="messageSelect();">메시지 선택</button>
+
+    <script>
+        function firstBox() {
+            const $first = document.getElementById("box1");
+            $first.innerText = "첫 번째 박스를 찾았습니다"
+            $first.style.backgroundColor = "#ffcccc";
+        } 
+
+        function secocndBox() {
+            const $secocnd = document.getElementById("box2");
+            $secocnd.innerText = "두 번째 박스를 찾았습니다"
+            $secocnd.style.backgroundColor = "#ccffcc";
+        } 
+
+        function messageSelect() {
+            const $message = document.getElementById("text");
+            $message.textContent = "ID로 요소를 성공적으로 찾았습니다";
+            $message.style.color = "#0056b3";
+            $message.style.fontSize = "20px";
+            $message.style.fontWeight = "bold";
+        } 
+    </script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            padding: 10px;
+            margin: 5px;
+            max-width: 500px;
+        }
+
+        ul {
+            padding: 20px 60px 20px 50px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 3px;
+            border: 0;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>첫 번째 문단입니다.</p>
+    <p>두 번째 문단입니다.</p>
+    <p>세 번째 문단입니다.</p>
+
+    <ul>
+        <li>첫 번째 목록</li>
+        <li>두 번째 목록</li>
+        <li>세 번째 목록</li>
+        <li>네 번째 목록</li>
+    </ul>
+
+    <button onclick="selectm();">모든 문단 선택</button>
+    <button onclick="selectl();">모든 목록 선택</button>
+    <button onclick="firstm();">첫 번째 문단만 선택</button>
+
+    <script>
+        function selectm() {
+            var selectm = document.querySelectorAll("p");
+            selectm.forEach((p, idx) => {
+                p.innerText = "선택된 문단" + (idx + 1);
+                p.style.backgroundColor = "#ffb700";
+            })
+        }
+
+        function selectl() {
+            var selectl = document.querySelectorAll("li");
+            selectl.forEach((li, idx) => {
+                li.innerText = "새로운 목록 항목 " + (idx + 1);
+                li.style.color = "#007bff";
+                li.style.fontWeight = "bold";
+            })
+        }
+
+        function firstm() {
+            var firstm = document.getElementsByTagName("p");
+            if(firstm.length > 0){
+            firstm[0].innerHTML= "첫 번째 문단만 선택되었습니다!";
+            firstm[0].style.backgroundColor = "#ccffcc";
+            }
+            else {
+                firstm.style.backgroundColor = "#000000";
+            }
+        } 
+    </script>
+
+
+</body>
+
+</html>
