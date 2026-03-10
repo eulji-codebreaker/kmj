@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            border: 2px, solid blue;
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        p {
+            background: red;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <p id="change1">교체될 자식 1</p>
+    <p id="change2">교체될 자식 2</p>
+    <p id="change3">교체될 자식 3</p>
+</div>
+
+
+    <button onclick="chang();">첫 번째 교체</button>
+    <button onclick="changText();">두 번째 교체</button>
+    <button onclick="changHtml();">세 번째 교체</button>
+
+    <script>
+        function chang() {
+            var element = document.getElementById('change1');
+            element.innerHTML = "새로운 첫 번째 자식";
+            element.style.backgroundColor = "green";
+        }
+
+        function changText() {
+            const element1 = document.getElementById('change2');
+            element1.innerHTML = "새로운 두 번째 자식";
+            element1.style.backgroundColor = "green";
+            element1.style.width = "200px";
+        }
+
+        function changHtml() {
+            const element2 = document.getElementById('change3');
+            element2.innerHTML = "새로운 세 번째 자식";
+            element2.style.backgroundColor = "green";
+            element2.style.fontWeight = "bold";
+            element2.style.fontSize = "20px";
+
+        }
+    </script>
+
+
+</body>
+
+</html>

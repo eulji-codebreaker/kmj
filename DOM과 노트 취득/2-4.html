@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            background: red;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="change1">교체될 요소 1</div>
+    <div id="change2">교체될 요소 2</div>
+    <div id="change3">교체될 요소 3</div>
+
+
+    <button onclick="chang();">요소로 교체</button>
+    <button onclick="changText();">텍스트로 교체</button>
+    <button onclick="changHtml();">HTML로 교체</button>
+
+    <script>
+        function chang() {
+            var element = document.getElementById('change1');
+            element.innerHTML = "새로운 요소로 교체됨";
+            element.style.backgroundColor = "green";
+        }
+
+        function changText() {
+            const element1 = document.getElementById('change2');
+            element1.replaceWith("단순 텍스트로 교체됨");
+        }
+
+        function changHtml() {
+            const element2 = document.getElementById('change3');
+            element2.innerHTML = "HTML 요소로 교체됨";
+            element2.style.backgroundColor = "green";
+            element2.style.fontWeight = "bold";
+        }
+    </script>
+
+
+</body>
+
+</html>

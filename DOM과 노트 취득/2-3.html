@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #target {
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 5px;
+            background-color: white;
+        }
+
+        .highlight {
+            background-color: yellow;
+            border: 1px solid red;
+            padding: 3px;
+            margin: 2px;
+        }
+
+        .before {
+            color: white;
+            background: orangered;
+        }
+        
+        .begin {
+            background: orange;
+        }
+
+        .befored {
+            background: purple;
+            color: white;
+        }
+
+        .end {
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="target">
+        <p>기존 내용</p>
+    </div>
+    <script>
+            const target = document.getElementById("target");
+            target.insertAdjacentHTML("beforebegin", '<div class="before">beforebegin - 앞 형제</div>');
+            target.insertAdjacentHTML("afterbegin", '<div class="begin">afterbegin - 첫 자식</div>');
+            target.insertAdjacentHTML("beforeend", '<div class="befored">beforeed - 마지막 자식</div>');
+            target.insertAdjacentHTML("afterend", '<div class="end">afterend - 뒤 형제</div>');
+    </script>
+    
+
+</body>
+
+</html>

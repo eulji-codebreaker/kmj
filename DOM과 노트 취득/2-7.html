@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            border: 2px, solid red;
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        .item {
+            background: lightcoral;
+            border: 1px solid brown;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="container" class="container">
+    <div class="item" id="child1">삭제할 자식 1</div>
+    <div class="item" id="child2">삭제할 자식 2</div>
+    <div class="item" id="child3">삭제할 자식 3</div>
+    <div class="item" id="child4">삭제할 자식 4</div>
+</div>
+
+
+    <button onclick="del();">첫 번째 자식 삭제</button>
+    <button onclick="del1();">두 번째 자식 삭제</button>
+    <button onclick="del2();">세 번째 자식 삭제</button>
+    <button onclick="del3();">마지막 자식 삭제</button>
+
+    <script>
+        function del() {
+            const container = document.getElementById('container'); 
+            const child = document.getElementById('child1');
+            container.removeChild('child');
+        }
+
+        function del1() {
+            const container = document.getElementById('container'); 
+            const child = document.getElementById('child2');
+            container.removeChild('child');
+        }
+
+        function del2() {
+            const container = document.getElementById('container'); 
+            const child = document.getElementById('child3');
+            container.removeChild('child');
+        }
+
+        function del3() {
+            const container = document.getElementById('container'); 
+            const child = document.getElementById('child4');
+            container.removeChild('child');
+        }
+    </script>
+
+
+</body>
+
+</html>

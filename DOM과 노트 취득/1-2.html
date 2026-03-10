@@ -22,7 +22,8 @@
             background-color: #007bff;
             color: white;
             display: flex;
-            justify-content: center;
+            /* justify-content: center; */
+            flex-direction: column;
             text-align: center;
             margin: 10px;
             padding: 10px 20px;
@@ -73,14 +74,10 @@
         }
 
         function firstm() {
-            var firstm = document.getElementsByTagName("p");
-            if(firstm.length > 0){
-            firstm[0].innerHTML= "첫 번째 문단만 선택되었습니다!";
-            firstm[0].style.backgroundColor = "#ccffcc";
-            }
-            else {
-                firstm.style.backgroundColor = "#000000";
-            }
+            const firstm = document.getElementsByTagName('p');
+            firstm.innerHTML= "첫 번째 문단만 선택되었습니다!";
+            firstm.style.backgroundColor = "#ccffcc";
+            
         } 
     </script>
 

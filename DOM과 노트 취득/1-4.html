@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box {
+            border-radius: 5px;
+            border: 2px solid #dee2e6;
+            padding: 10px;
+            margin: 5px 5px 10px;
+            max-width: 500px;
+            background-color: #f8f9fa;
+        }
+
+        li {
+            padding: 5px;
+            /* margin: 5px 5px 10px; */
+            max-width: 500px;
+        }
+
+        .spacial {
+            background-color: #fff3cd;
+            border-color: #ffeaa7;
+            padding: 10px;
+            max-width: 500px;
+      }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            margin: 5px;
+            padding: 10px 15px;
+            border-radius: 3px;
+            border: 0;
+            cursor: pointer;
+            font-size: 14px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 id="title">제목 영역</h1>
+        <div class="box">첫 번째 박스</div>
+        <div class="box spacial">두 번째 박스 (특별)</div>
+        <div class="box">세 번째 박스</div>
+    </div>
+
+    <div class="container">
+        <ul>
+            <li>첫 번째 목록</li>
+            <li class="spacial">두 번째 목록 (특별)</li>
+            <li>세 번째 목록</li>
+            <li>네 번째 목록</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <input type="text" placeholder="텍스트 입력">
+        <input type="email" placeholder="이메일 입력">
+        <button>일반 버튼</button>
+    </div>
+
+    <button onclick="selectID();">ID로 선택</button>
+    <button onclick="selectTag();">태그로 선택</button>
+    <button onclick="selectClass();">특별 클래스 선택</button>
+    <button onclick="selectFirst();">첫 번째만 선택</button>
+    <button onclick="selectAll();">모든 박스 선택</button>
+    <button onclick="select();">복합 선택자</button>
+    <button onclick="selectInput();">입력 필드 선택</button>
+    <button onclick="sClass();">클래스로 선택</button>
+
+    <script>
+        function selectID() {
+            var title = document.querySelector("#title");
+            title.innerHTML = "ID로 선택된 제목!";
+            title.style.color = "#dc3545";
+        }
+
+        function selectTag() {
+            var tag = document.querySelector(".box");
+            tag.innerHTML = "태그로 선택된 첫 번째 p요소!";
+            tag.style.border = "2px solid #007bff";
+        }
+
+        function selectClass() {
+            var spacial = document.querySelectorAll(".spacial");
+            for(var i =0; i < spacial.length; i++) {
+                spacial[i].innerHTML = "특별 클래스" + (i + 1) + "번!";
+                spacial[i].style.fontWeight = "bold";
+                spacial[i].style.color = "#856404";
+
+            }
+        }
+
+        function selectFirst() {
+            var first = document.querySelector(".box");
+            first.innerHTML = "첫 번째 컨테이너의 첫 번째 박스!";
+            first.style.border = "2px solid #007bff";
+            first.style.backgroundColor = "#cce5ff";
+        }
+
+        function selectAll() {
+            var all = document.querySelectorAll(".box");
+            for(var i =0; i < all.length; i++) {
+                all[i].innerHTML = "모든 박스" + (i + 1) + "변경!"
+                all[i].style.backgroundColor = "#ffccff";
+            }
+        }
+
+        function select() {
+            var multiple = document.querySelectorAll(".box:not(.spacial)");
+
+            for (var i = 0; i < multiple.length; i++) {
+            multiple[i].innerHTML = "복합 선택자로 선택됨!";
+            multiple[i].style.border = "2px dashed #28a745";
+            multiple[i].style.backgroundColor = "#ccffcc";
+            }
+        }
+
+        function selectInput() {
+            var textInput = document.querySelector('input[type="text"]');
+            var emailInput = document.querySelector('input[type="email"]');
+            
+            textInput.value = "querySelector로 설정된 값";
+            textInput.style.backgroundColor = "#fff3cd";
+            
+            emailInput.value = "test@example.com"
+            emailInput.style.backgroundColor = "#d1ecf1";
+        }
+
+        function sClass() {
+            var firstBox = document.querySelector(".box");
+            firstBox.innerHTML = "클래스로 선택된 첫 번째 박스!";
+            firstBox.style.backgroundColor = "#d4edda";
+        }
+    </script>
+
+
+</body>
+
+</html>

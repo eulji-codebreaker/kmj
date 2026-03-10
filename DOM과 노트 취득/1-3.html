@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border-radius: 5px;
+            border: 2px solid lightgray;
+            padding: 10px;
+            margin: 5px 5px 10px;
+            max-width: 500px;
+        }
+
+         .highlight{
+            border-radius: 5px;
+            border: 2px solid #ffd901;
+            background-color: #ffffcc;
+            padding: 10px;
+            margin: 5px 5px 10px;
+            max-width: 500px;
+        } 
+
+        .highlight1 {
+            background-color: #ffffcc;
+        }
+
+        .item {
+            /* border: 1px solid lightgray; */
+            border-left: 3px solid #007bff;
+            background-color: lightgray;
+            margin: 5px;
+            padding: 10px;
+            max-width: 500px;
+        }
+
+        p {
+            background-color: #ffffcc;
+            max-width: 500px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 3px;
+            border: 0;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">첫 번째 박스</div>
+    <div class="box">두 번째 박스</div>
+    <div class="box highlight">세 번째 박스 (하이라이트)</div>
+
+
+    <div class="item">첫 번째 아이템</div>
+    <div class="item">두 번째 아이템</div>
+    <div class="item">세 번째 아이템</div>
+
+    <p class="highlight1">하이라이트된 문단입니다</p>
+
+
+    <button onclick="selectb();">모든 박스 선택</button>
+    <button onclick="selecti();">모든 아이템 선택</button>
+    <button onclick="highlight();">하이라이트 요소들 선택</button>
+
+    <script>
+        function selectb() {
+            var selectBox = document.getElementsByClassName("box");
+            for (var i = 0; i < selectBox.length; i++) {
+                selectBox[i].innerHTML = "선택된 박스 " + (i + 1);
+                selectBox[i].style.backgroundColor = "#ffcccc";
+            }
+        }
+
+        function selecti() {
+            var selectItem = document.getElementsByClassName("item");
+            for (var i = 0; i < selectItem.length; i++) {
+                selectItem[i].innerHTML = "새로운 아이템 " + (i + 1);
+                selectItem[i].style.backgroundColor = "#ccffcc";
+                selectItem[i].style.borderLeftColor = "#28a745";
+            }
+        }
+
+        function highlight() {
+            // 3번째 박스 선택
+            var highlightBox = document.getElementsByClassName("highlight");
+
+            for (var i = 0; i < highlightBox.length; i++) {
+                highlightBox[i].innerHTML = "세 번째 박스 (하이라이트) (수정됨)";
+                highlightBox[i].style.backgroundColor = "#ffdddd";
+                highlightBox[i].style.border = "2px solid #ffd901";
+                highlightBox[i].style.fontWeight = "bold";
+            }
+
+            // p 태그 선택
+            var ptag = document.getElementsByTagName("p");
+
+            for (var i = 0; i < ptag.length; i++) {
+                ptag[i].innerHTML = "하이라이트된 문단입니다. (수정됨)";
+                ptag[i].style.backgroundColor = "#ffdddd";
+                ptag[i].style.fontWeight = "bold";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
